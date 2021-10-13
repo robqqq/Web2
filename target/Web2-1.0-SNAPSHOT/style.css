@@ -1,0 +1,91 @@
+body {
+    background-image: url("images/background.jpg");
+    margin: 0;
+}
+
+* {
+    font-family: serif;
+}
+
+header {
+    background-color: rgba(138, 43, 226, 0.3);
+    text-align: center;
+    color: rgb(243, 220, 152);
+    font-size: 40px;
+}
+
+#plot {
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#plot-svg {
+    height: 300px;
+    width: 300px;
+}
+
+.plot-figure {
+    fill: red;
+    fill-opacity: 0.3;
+    stroke: red;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(138, 43, 226, 0.2);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(243, 220, 152, 0.2);
+}
+
+table {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 20px;
+    margin: 20px;
+    text-align: center;
+    align-content: center;
+    padding: 3px;
+}
+
+.form {
+    align-content: center;
+    text-align: center;
+}
+
+#error {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    color: red;
+}
+
+button {
+    background-color: rgba(138, 43, 226, 0.2);
+}
+
+#input {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+input[type=text] {
+    text-align: center;
+}
+
+.result_table{
+    table-layout: fixed;
+    width: 80%;
+    margin-left: 10%;
+}
