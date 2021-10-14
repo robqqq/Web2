@@ -116,8 +116,10 @@
         </form>
     </div>
 
-    <div hidden id="error">
-        <p id="error_message">Something went wrong</p>
+    <div <%
+        if (request.getAttribute("err_msg") == null) out.print("hidden");
+    %> id="error">
+        <p id="error_message"><%= request.getAttribute("err_msg") %></p>
     </div>
 
     <div id="results">

@@ -11,11 +11,13 @@ public class ControllerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.removeAttribute("err_msg");
         String xStr = request.getParameter("x_value");
         String yStr = request.getParameter("y_value");
         String rStr = request.getParameter("r_value");
         if (xStr == null || yStr == null || rStr == null){
             Logger.getLogger("ControllerServlet").warning("One of the parameters is not set");
+            request.setAttribute("err_msg", "One of the parameters is not set");
             getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         } else {
             try {
@@ -25,6 +27,7 @@ public class ControllerServlet extends HttpServlet {
                 getServletContext().getRequestDispatcher("/area-check-servlet").forward(request, response);
             } catch (NumberFormatException e) {
                 Logger.getLogger("ControllerServlet").warning("One of the parameters is not a number");
+                request.setAttribute("err_msg", "One of the parameters is not a number");
                 getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
             }
         }

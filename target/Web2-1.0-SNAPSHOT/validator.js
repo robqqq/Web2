@@ -68,3 +68,7 @@ function error(msg) {
         err.hidden = true
     }, 3000)
 }
+
+function hideError() {
+    document.getElementById("error").hidden
+}
